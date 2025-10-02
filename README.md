@@ -1,4 +1,4 @@
-# 🧠 QESN-MABe: Quantum Echo State Network for Mouse Behavior Analysis
+# QESN-MABe: Quantum Echo State Network for Mouse Behavior Analysis
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
