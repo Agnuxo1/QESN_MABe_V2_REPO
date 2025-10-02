@@ -1,0 +1,16 @@
+{
+  "model_type": "QESN-MABe",
+  "version": "1.0",
+  "grid_width": 64,
+  "grid_height": 64,
+  "window_size": 60,
+  "stride": 30,
+  "coupling_strength": 0.5,
+  "diffusion_rate": 0.5,
+  "decay_rate": 0.001,
+  "quantum_noise": 0.0005,
+  "num_classes": 37,
+  "class_names": ["allogroom", "approach", "attack", "attemptmount", "avoid", "biteobject", "chase", "chaseattack", "climb", "defend", "dig", "disengage", "dominance", "dominancegroom", "dominancemount", "ejaculate", "escape", "exploreobject", "flinch", "follow", "freeze", "genitalgroom", "huddle", "intromit", "mount", "rear", "reciprocalsniff", "rest", "run", "selfgroom", "shepherd", "sniff", "sniffbody", "sniffface", "sniffgenital", "submit", "tussle"],
+  "best_accuracy": 0.925906,
+  "export_timestamp": "1759273799"
+}

@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(python:*)",
+      "Bash(cat:*)",
+      "Bash(jupyter:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

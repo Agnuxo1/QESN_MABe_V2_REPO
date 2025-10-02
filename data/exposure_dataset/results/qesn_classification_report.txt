@@ -1,0 +1,42 @@
+Accuracy: 3.684%
+Macro F1: 0.291%
+
+                precision    recall  f1-score   support
+
+     allogroom      0.000     0.000     0.000        11
+      approach      0.050     1.000     0.096         7
+        attack      0.000     0.000     0.000         6
+  attemptmount      0.000     0.000     0.000         7
+         avoid      0.000     0.000     0.000         2
+    biteobject      0.000     0.000     0.000         2
+         chase      0.000     0.000     0.000         4
+   chaseattack      0.000     0.000     0.000         5
+         climb      0.000     0.000     0.000         2
+        defend      0.000     0.000     0.000         9
+     disengage      0.000     0.000     0.000         7
+     dominance      0.000     0.000     0.000         4
+dominancegroom      0.000     0.000     0.000         4
+dominancemount      0.000     0.000     0.000         9
+        escape      0.000     0.000     0.000         2
+ exploreobject      0.000     0.000     0.000         3
+        flinch      0.000     0.000     0.000        16
+        follow      0.000     0.000     0.000         4
+        freeze      0.000     0.000     0.000         6
+  genitalgroom      0.000     0.000     0.000         4
+        huddle      0.000     0.000     0.000         5
+      intromit      0.000     0.000     0.000         8
+         mount      0.000     0.000     0.000         2
+          rear      0.000     0.000     0.000         2
+          rest      0.000     0.000     0.000         8
+           run      0.000     0.000     0.000         9
+      shepherd      0.000     0.000     0.000         6
+         sniff      0.000     0.000     0.000         4
+     sniffbody      0.000     0.000     0.000         3
+     sniffface      0.000     0.000     0.000         4
+  sniffgenital      0.000     0.000     0.000         8
+        submit      0.000     0.000     0.000         5
+        tussle      0.000     0.000     0.000        12
+
+      accuracy                          0.037       190
+     macro avg      0.002     0.030     0.003       190
+  weighted avg      0.002     0.037     0.004       190

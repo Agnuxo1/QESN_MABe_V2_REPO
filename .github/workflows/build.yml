@@ -1,0 +1,90 @@
+name: Build and Test QESN
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup vcpkg
+      run: |
+        git clone https://github.com/Microsoft/vcpkg.git C:\vcpkg
+        cd C:\vcpkg
+        .\bootstrap-vcpkg.bat
+        
+    - name: Install dependencies
+      run: |
+        C:\vcpkg\vcpkg install arrow:x64-windows parquet:x64-windows eigen3:x64-windows
+        
+    - name: Configure CMake
+      run: |
+        mkdir build
+        cd build
+        cmake .. -G "Visual Studio 17 2022" -A x64 -DCMAKE_PREFIX_PATH="C:/vcpkg/installed/x64-windows"
+        
+    - name: Build
+      run: |
+        cd build
+        cmake --build . --config Release
+        
+    - name: Test
+      run: |
+        cd build
+        .\Release\qesn_train.exe --help
+
+  build-linux:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libarrow-dev libparquet-dev libeigen3-dev
+        
+    - name: Configure CMake
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        
+    - name: Build
+      run: |
+        cd build
+        make -j8
+        
+    - name: Test
+      run: |
+        cd build
+        ./qesn_train --help
+
+  python-tests:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.8'
+        
+    - name: Install Python dependencies
+      run: |
+        pip install -r requirements.txt
+        
+    - name: Run Python tests
+      run: |
+        python -m pytest tests/python/ -v
+        
+    - name: Test inference
+      run: |
+        python examples/quick_demo.py
