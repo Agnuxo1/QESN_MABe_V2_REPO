@@ -1,5 +1,5 @@
 # QESN-MABe: Quantum Echo State Network Demo
-# 🤗 HuggingFace Spaces - Ejecuta con: python app.py
+# 🤗 HuggingFace Spaces - https://huggingface.co/spaces/Agnuxo/QESN-MABe-Demo
 
 import streamlit as st
 import numpy as np
