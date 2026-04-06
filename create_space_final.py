@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Script simple para crear HuggingFace Space usando requests
+Script para crear HuggingFace Space - Version simple
 """
 
 import requests
@@ -33,16 +33,23 @@ def create_space():
     print("Creando Space...")
     response = requests.post(url, headers=headers, json=data)
     
+    print(f"Status: {response.status_code}")
+    
     if response.status_code == 201:
-        print(f"Space creado exitosamente!")
+        print("Space creado exitosamente!")
         print(f"URL: https://huggingface.co/spaces/{REPO_ID}")
         return True
     elif response.status_code == 409:
-        print(f"Space ya existe: https://huggingface.co/spaces/{REPO_ID}")
+        print("Space ya existe!")
+        print(f"URL: https://huggingface.co/spaces/{REPO_ID}")
         return True
     else:
-        print(f"Error: {response.status_code}")
-        print(f"Response: {response.text}")
+        print("Error en la respuesta")
+        try:
+            error_text = response.text
+            print(f"Error: {error_text}")
+        except:
+            print("No se pudo leer el error")
         return False
 
 def upload_file(file_path, repo_path):
@@ -53,18 +60,24 @@ def upload_file(file_path, repo_path):
         "Authorization": f"Bearer {HF_TOKEN}"
     }
     
-    with open(file_path, 'rb') as f:
-        files = {'file': (repo_path, f)}
-        data = {'path': repo_path}
-        
-        response = requests.post(url, headers=headers, files=files, data=data)
-        
-        if response.status_code == 200:
-            print(f"Archivo subido: {repo_path}")
-            return True
-        else:
-            print(f"Error subiendo {repo_path}: {response.status_code}")
-            return False
+    try:
+        with open(file_path, 'rb') as f:
+            files = {'file': (repo_path, f)}
+            data = {'path': repo_path}
+            
+            response = requests.post(url, headers=headers, files=files, data=data)
+            
+            print(f"Subiendo {repo_path}: Status {response.status_code}")
+            
+            if response.status_code == 200:
+                print(f"Archivo subido: {repo_path}")
+                return True
+            else:
+                print(f"Error subiendo {repo_path}")
+                return False
+    except Exception as e:
+        print(f"Error con archivo {file_path}: {str(e)}")
+        return False
 
 def main():
     """Funcion principal"""
@@ -73,6 +86,7 @@ def main():
     
     # Crear Space
     if not create_space():
+        print("No se pudo crear el Space")
         return False
     
     # Subir archivos
@@ -83,14 +97,23 @@ def main():
     ]
     
     print("\nSubiendo archivos...")
+    success_count = 0
+    
     for local_path, repo_path in files_to_upload:
         if Path(local_path).exists():
-            upload_file(local_path, repo_path)
+            if upload_file(local_path, repo_path):
+                success_count += 1
         else:
             print(f"Archivo no encontrado: {local_path}")
     
-    print(f"\nSpace listo: https://huggingface.co/spaces/{REPO_ID}")
-    return True
+    print(f"\nArchivos subidos: {success_count}/{len(files_to_upload)}")
+    print(f"Space URL: https://huggingface.co/spaces/{REPO_ID}")
+    
+    return success_count > 0
 
 if __name__ == "__main__":
-    main()
+    success = main()
+    if success:
+        print("\nSpace creado y configurado exitosamente!")
+    else:
+        print("\nHubo problemas en la creacion del Space")
