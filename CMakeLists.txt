@@ -1,123 +1,138 @@
-# QESN-MABe V2: Quantum Energy State Network for Mouse Behavior Classification
+# QESN-MABe V2: Quantum-inspired Echo State Network (classical energy diffusion)
 # Author: Francisco Angulo de Lafuente
-# License: MIT
-# Adapted for existing installations: VS2022, Eigen, CUDA 12
+# License: Apache-2.0
+#
+# Portable CMake. No hardcoded absolute paths. CUDA and Arrow are OFF by default.
 
 cmake_minimum_required(VERSION 3.20)
-project(QESN_MABe_V2 VERSION 2.0 LANGUAGES CXX)
+project(QESN_MABe_V2 VERSION 1.0.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-# Use existing installations
-set(EIGEN3_INCLUDE_DIR "E:/eigen-3.4.0")
-set(CUDA_TOOLKIT_ROOT_DIR "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.0")
+option(QESN_WITH_CUDA  "Enable CUDA GPU acceleration"         OFF)
+option(QESN_WITH_ARROW "Enable Apache Arrow/Parquet support"  OFF)
+option(QESN_WITH_OPENMP "Enable OpenMP parallelism"           ON)
 
-# Find Eigen3
-find_package(Eigen3 3.4 QUIET)
+# ---------------------------------------------------------------------------
+# Eigen3: try find_package, fall back to FetchContent.
+# ---------------------------------------------------------------------------
+find_package(Eigen3 3.4 QUIET CONFIG)
 if(NOT Eigen3_FOUND)
-    message(STATUS "Using local Eigen3 installation at ${EIGEN3_INCLUDE_DIR}")
-    add_library(Eigen3::Eigen INTERFACE IMPORTED)
-    set_target_properties(Eigen3::Eigen PROPERTIES
-        INTERFACE_INCLUDE_DIRECTORIES "${EIGEN3_INCLUDE_DIR}"
+    message(STATUS "Eigen3 not found via find_package; falling back to FetchContent.")
+    include(FetchContent)
+    FetchContent_Declare(
+        eigen
+        GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
+        GIT_TAG        3.4.0
     )
+    # Eigen's CMake pulls in a lot of extras; disable the ones we don't need.
+    set(EIGEN_BUILD_DOC     OFF CACHE BOOL "" FORCE)
+    set(EIGEN_BUILD_TESTING OFF CACHE BOOL "" FORCE)
+    set(BUILD_TESTING       OFF CACHE BOOL "" FORCE)
+    FetchContent_MakeAvailable(eigen)
 endif()
 
-# Find CUDA (optional for GPU acceleration)
-find_package(CUDA QUIET)
-if(CUDA_FOUND)
-    message(STATUS "CUDA found: ${CUDA_VERSION}")
-    set(CUDA_NVCC_FLAGS ${CUDA_NVCC_FLAGS} -arch=sm_75 -std=c++17)
-    add_definitions(-DUSE_CUDA)
-else()
-    message(STATUS "CUDA not found - building CPU-only version")
+# ---------------------------------------------------------------------------
+# Optional: OpenMP
+# ---------------------------------------------------------------------------
+if(QESN_WITH_OPENMP)
+    find_package(OpenMP QUIET)
+    if(OpenMP_CXX_FOUND)
+        message(STATUS "OpenMP: enabled")
+    else()
+        message(STATUS "OpenMP: requested but not found - continuing single-threaded")
+    endif()
 endif()
 
-# Find OpenMP
-find_package(OpenMP)
-if(OpenMP_CXX_FOUND)
-    message(STATUS "OpenMP found - enabling parallel processing")
-else()
-    message(WARNING "OpenMP not found - will use single-threaded execution")
+# ---------------------------------------------------------------------------
+# Optional: CUDA
+# ---------------------------------------------------------------------------
+if(QESN_WITH_CUDA)
+    include(CheckLanguage)
+    check_language(CUDA)
+    if(CMAKE_CUDA_COMPILER)
+        enable_language(CUDA)
+        set(CMAKE_CUDA_STANDARD 17)
+        message(STATUS "CUDA: enabled (${CMAKE_CUDA_COMPILER})")
+    else()
+        message(STATUS "CUDA: requested but no CUDA compiler found - building CPU-only")
+        set(QESN_WITH_CUDA OFF)
+    endif()
 endif()
 
-# Source files
-set(SOURCES
+# ---------------------------------------------------------------------------
+# Optional: Apache Arrow / Parquet
+# ---------------------------------------------------------------------------
+if(QESN_WITH_ARROW)
+    find_package(Arrow QUIET CONFIG)
+    find_package(Parquet QUIET CONFIG)
+    if(NOT Arrow_FOUND OR NOT Parquet_FOUND)
+        message(STATUS "Arrow/Parquet requested but not found - disabling.")
+        set(QESN_WITH_ARROW OFF)
+    else()
+        message(STATUS "Arrow: ${Arrow_VERSION}  Parquet: ${Parquet_VERSION}")
+    endif()
+endif()
+
+# ---------------------------------------------------------------------------
+# Sources (kept only if they exist on disk, so a partial checkout still configures).
+# ---------------------------------------------------------------------------
+set(_candidate_sources
     src/core/quantum_neuron.cpp
     src/core/quantum_foam.cpp
     src/io/dataset_loader.cpp
     src/training/trainer.cpp
     src/main.cpp
 )
-
-# Executable
-add_executable(qesn_train ${SOURCES})
-
-target_include_directories(qesn_train PRIVATE
-    ${CMAKE_SOURCE_DIR}/include
-    ${EIGEN3_INCLUDE_DIR}
-)
-
-# Link Eigen3
-target_link_libraries(qesn_train PRIVATE
-    Eigen3::Eigen
-)
-
-# Link OpenMP if available
-if(OpenMP_CXX_FOUND)
-    target_link_libraries(qesn_train PRIVATE OpenMP::OpenMP_CXX)
-endif()
-
-# Link CUDA if available
-if(CUDA_FOUND)
-    target_include_directories(qesn_train PRIVATE ${CUDA_INCLUDE_DIRS})
-    target_link_libraries(qesn_train PRIVATE ${CUDA_LIBRARIES})
-endif()
-
-# Compiler warnings
-if(MSVC)
-    target_compile_options(qesn_train PRIVATE /W4 /bigobj)
-    # Disable specific warnings for Apache Arrow compatibility
-    target_compile_options(qesn_train PRIVATE /wd4251 /wd4275)
-else()
-    target_compile_options(qesn_train PRIVATE -Wall -Wextra -Wpedantic)
-endif()
-
-# Optimization flags for Release
-if(CMAKE_BUILD_TYPE STREQUAL "Release")
-    if(MSVC)
-        target_compile_options(qesn_train PRIVATE /O2 /Ob2 /Oi /Ot /GL)
-        set_target_properties(qesn_train PROPERTIES LINK_FLAGS "/LTCG")
-    else()
-        target_compile_options(qesn_train PRIVATE -O3 -march=native)
+set(SOURCES "")
+foreach(_f IN LISTS _candidate_sources)
+    if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${_f}")
+        list(APPEND SOURCES "${_f}")
     endif()
-endif()
+endforeach()
 
-# Installation
-install(TARGETS qesn_train DESTINATION bin)
+if(SOURCES)
+    add_executable(qesn_train ${SOURCES})
+    target_include_directories(qesn_train PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+    )
+    target_link_libraries(qesn_train PRIVATE Eigen3::Eigen)
+
+    if(OpenMP_CXX_FOUND)
+        target_link_libraries(qesn_train PRIVATE OpenMP::OpenMP_CXX)
+    endif()
+
+    if(QESN_WITH_CUDA)
+        target_compile_definitions(qesn_train PRIVATE QESN_USE_CUDA=1)
+    endif()
+
+    if(QESN_WITH_ARROW)
+        target_link_libraries(qesn_train PRIVATE Arrow::arrow_shared Parquet::parquet_shared)
+        target_compile_definitions(qesn_train PRIVATE QESN_USE_ARROW=1)
+    endif()
+
+    if(MSVC)
+        target_compile_options(qesn_train PRIVATE /W4 /bigobj /wd4251 /wd4275)
+    else()
+        target_compile_options(qesn_train PRIVATE -Wall -Wextra -Wpedantic)
+    endif()
+
+    install(TARGETS qesn_train RUNTIME DESTINATION bin)
+else()
+    message(STATUS "No C++ sources found on disk - configuring Python-only package.")
+endif()
 
 message(STATUS "")
 message(STATUS "========================================")
 message(STATUS "QESN-MABe V2 Configuration Summary")
 message(STATUS "========================================")
-message(STATUS "C++ Standard: ${CMAKE_CXX_STANDARD}")
-message(STATUS "Build Type: ${CMAKE_BUILD_TYPE}")
-message(STATUS "Compiler: ${CMAKE_CXX_COMPILER_ID} ${CMAKE_CXX_COMPILER_VERSION}")
-message(STATUS "Eigen3: ${EIGEN3_INCLUDE_DIR}")
-if(CUDA_FOUND)
-    message(STATUS "CUDA: ${CUDA_VERSION} (GPU acceleration enabled)")
-else()
-    message(STATUS "CUDA: Not found (CPU-only build)")
-endif()
-if(OpenMP_CXX_FOUND)
-    message(STATUS "OpenMP: Enabled")
-else()
-    message(STATUS "OpenMP: Disabled")
-endif()
+message(STATUS "C++ Standard : ${CMAKE_CXX_STANDARD}")
+message(STATUS "Build Type   : ${CMAKE_BUILD_TYPE}")
+message(STATUS "Compiler     : ${CMAKE_CXX_COMPILER_ID} ${CMAKE_CXX_COMPILER_VERSION}")
+message(STATUS "CUDA         : ${QESN_WITH_CUDA}")
+message(STATUS "Arrow        : ${QESN_WITH_ARROW}")
+message(STATUS "OpenMP       : ${QESN_WITH_OPENMP}")
+message(STATUS "Sources found: ${SOURCES}")
 message(STATUS "========================================")
-message(STATUS "")
-
-# Note about Apache Arrow/Parquet
-message(STATUS "NOTE: Apache Arrow/Parquet reading will be handled via Python preprocessing")
-message(STATUS "      Run: python scripts/preprocess_parquet.py before training")
-message(STATUS "")

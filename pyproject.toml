@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qesn-mabe"
+version = "1.0.0"
+description = "Quantum-inspired Echo State Network (QESN) — classical energy-diffusion reservoir with complex amplitudes."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "Francisco Angulo de Lafuente", email = "agnuxo1@gmail.com" }
+]
+keywords = ["reservoir-computing", "echo-state-network", "energy-diffusion", "mabe", "behavior-classification"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy>=1.24",
+    "tqdm>=4.65",
+]
+
+[project.optional-dependencies]
+arrow = ["pyarrow>=14.0"]
+dev = ["pytest>=7.4", "build>=1.0", "twine>=4.0"]
+
+[project.urls]
+Homepage = "https://github.com/Agnuxo1/QESN_MABe_V2_REPO"
+Issues = "https://github.com/Agnuxo1/QESN_MABe_V2_REPO/issues"
+
+[project.scripts]
+qesn-mabe = "qesn.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["qesn*"]
+
+[tool.setuptools.package-data]
+qesn = ["py.typed"]

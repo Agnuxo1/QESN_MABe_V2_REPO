@@ -152,3 +152,7 @@ desktop.ini
 # Backup files
 *.bak
 *.backup
+build_cmake/
+dist/
+build/
+*.egg-info/

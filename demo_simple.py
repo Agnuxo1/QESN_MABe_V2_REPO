@@ -14,8 +14,18 @@ Este demo funciona solo con librerías estándar de Python.
 
 import math
 import random
+import sys
 import time
 from typing import List, Tuple
+
+# Windows Unicode fix: force UTF-8 on stdout/stderr so emoji/accented chars
+# do not raise UnicodeEncodeError on cp1252 consoles.
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")  # type: ignore[attr-defined]
+        sys.stderr.reconfigure(encoding="utf-8")  # type: ignore[attr-defined]
+    except Exception:
+        pass
 
 class QESNDemoSimple:
     """Demo simplificado de QESN usando solo librerías estándar"""
