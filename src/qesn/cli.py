@@ -37,9 +37,7 @@ def cmd_info(_args: argparse.Namespace) -> int:
     print("Author: Francisco Angulo de Lafuente")
     print("License: Apache-2.0")
     print(DISCLAIMER)
-    root = Path(__file__).resolve().parents[2]
-    disclaimer_path = root / "BENCHMARK_DISCLAIMER.md"
-    print(f"Disclaimer file: {disclaimer_path}")
+    print("Benchmark disclaimer: see BENCHMARK_DISCLAIMER.md in the source repository.")
     return 0
 
 
@@ -101,7 +99,7 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--version", action="version", version=f"qesn-mabe {__version__}")
     sub = p.add_subparsers(dest="cmd", required=True)
 
-    sub.add_parser("info", help="Show build info and disclaimer path.").set_defaults(func=cmd_info)
+    sub.add_parser("info", help="Show build info and benchmark caveat.").set_defaults(func=cmd_info)
     sub.add_parser("status", help="Show runtime status.").set_defaults(func=cmd_status)
 
     sim = sub.add_parser("simulate", help="Run a synthetic diffusion simulation.")
