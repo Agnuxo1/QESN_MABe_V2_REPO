@@ -20,6 +20,7 @@ def test_info_runs(capsys) -> None:
     assert rc == 0
     assert "qesn-mabe" in out
     assert "Quantum-INSPIRED" in out or "quantum-inspired" in out.lower()
+    assert "BENCHMARK_DISCLAIMER.md" in out
 
 
 def test_status_runs(capsys) -> None:
