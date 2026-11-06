@@ -1,3 +1,6 @@
+# Author: Francisco Angulo de Lafuente
+# ORCID: https://orcid.org/0009-0001-1634-7063
+# Attribution recorded: 2026-11-06
 # QESN-MABe: Quantum Echo State Network Demo
 # HuggingFace Spaces - https://huggingface.co/spaces/Agnuxo/QESN-MABe-Demo
 

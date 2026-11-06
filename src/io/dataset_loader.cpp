@@ -1,3 +1,5 @@
+// ORCID: https://orcid.org/0009-0001-1634-7063
+// Attribution recorded: 2026-11-06
 // QESN-MABe V2: Quantum Energy State Network for Mouse Behavior Classification
 // Author: Francisco Angulo de Lafuente
 // License: MIT

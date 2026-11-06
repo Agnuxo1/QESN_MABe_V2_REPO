@@ -1,3 +1,5 @@
+# ORCID: https://orcid.org/0009-0001-1634-7063
+# Attribution recorded: 2026-11-06
 # OPTIMIZADO: Este archivo ha sido actualizado con las mejoras del plan de precision
 # - Motor de inferencia optimizado con fisica cuantica adaptativa
 # - Limpieza de datos y balanceo temporal

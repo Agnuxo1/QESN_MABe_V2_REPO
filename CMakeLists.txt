@@ -1,3 +1,5 @@
+# ORCID: https://orcid.org/0009-0001-1634-7063
+# Attribution recorded: 2026-11-06
 # QESN-MABe V2: Quantum-inspired Echo State Network (classical energy diffusion)
 # Author: Francisco Angulo de Lafuente
 # License: Apache-2.0

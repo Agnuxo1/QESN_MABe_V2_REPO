@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: Apache-2.0 | Author: Francisco Angulo de Lafuente | ORCID: https://orcid.org/0009-0001-1634-7063 | Attribution recorded: 2026-11-06 -->
+
 # QESN-MABe V2
 
 [![PyPI version](https://img.shields.io/pypi/v/qesn-mabe)](https://pypi.org/project/qesn-mabe/)
@@ -38,7 +40,7 @@ CPUs/GPUs — no quantum hardware is involved.
 - Not a variational quantum circuit.
 - Not running on quantum hardware.
 - Not a physically rigorous Schrödinger solver.
-- Not shipping the MABe 2022 dataset, weights, or a benchmark reproduction script.
+- Not shipping the MABe 2022 training dataset or a verified benchmark evaluation record. Historical performance claims are not reproducible from this repository alone. A `kaggle_model/model_weights.bin` artifact is present; its training provenance and the adjacent `best_accuracy` value are unverified, so it is not a validated benchmark model.
 
 ---
 
@@ -147,7 +149,9 @@ Apache-2.0 — see [LICENSE](LICENSE).
 
 ## Author
 
-Francisco Angulo de Lafuente — <agnuxo1@gmail.com>
+Francisco Angulo de Lafuente — <agnuxo1@gmail.com> — ORCID: https://orcid.org/0009-0001-1634-7063
+
+Attribution recorded: 2026-11-06 (this is not the original creation or release date).
 
 ---
 

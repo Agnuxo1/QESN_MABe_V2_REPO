@@ -1,3 +1,6 @@
+REM Author: Francisco Angulo de Lafuente
+REM ORCID: https://orcid.org/0009-0001-1634-7063
+REM Attribution recorded: 2026-11-06
 @echo off
 REM Script para configurar el dataset MABe en Windows
 REM Dataset Setup Script for Windows

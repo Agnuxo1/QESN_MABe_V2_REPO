@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: Apache-2.0 | Author: Francisco Angulo de Lafuente | ORCID: https://orcid.org/0009-0001-1634-7063 | Attribution recorded: 2026-11-06 -->
+
 # Benchmark Disclaimer
 
 The F1 numbers in prior versions of the README (and in comparison tables pitting
@@ -13,10 +15,7 @@ This release ships:
 - Synthetic unit tests (`tests/`) that do **not** require the MABe dataset.
 - A CLI (`qesn-mabe`) that runs synthetic simulations only.
 
-No pretrained weights, no preprocessed dataset splits, and no benchmark
-reproduction script are included. Any table of the form "QESN F1 = 0.48 vs
-ResNet F1 = 0.52" should be read as a historical claim by the author that has
-**not** been independently verified in this repository.
+The repository contains preprocessing and training code, but not an MABe 2022 training split or a verifiable benchmark evaluation record. It also tracks demo artifacts under `data/exposure_dataset/` and a binary at `kaggle_model/model_weights.bin` (64×64). `create_demo_data.py` describes synthetic demo-data generation, but this review did not independently reproduce the exact tracked data files. The current `create_demo_weights.py` generates 32×32 weights and does not match the tracked binary. The adjacent `best_accuracy: 0.925906` value has no verifiable training record. Treat the binary origin, training data, and reported accuracy as unverified. Any historical F1 table remains unverified and is **not** reproducible from this repository alone.
 
 If you want to reproduce benchmark numbers you will need to:
 

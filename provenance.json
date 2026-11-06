@@ -1,0 +1,1842 @@
+{
+  "project": "QESN-MABe V2",
+  "author": "Francisco Angulo de Lafuente",
+  "orcid": "https://orcid.org/0009-0001-1634-7063",
+  "recorded_on": "2026-11-06",
+  "canonical_url": "https://github.com/Agnuxo1/QESN_MABe_V2_REPO",
+  "visibility_at_review": "public",
+  "default_branch": "main",
+  "source_baseline": {
+    "commit": "ecdbb8b8da8819b044fc240f195dedff4f16597e",
+    "tree": "3462402eb5e43ce593afc74fce3e89720c66abc3",
+    "tracked_paths": 144,
+    "manifest": "provenance-baseline.json"
+  },
+  "license_scope": {
+    "status": "partial_unresolved",
+    "root": "Apache-2.0",
+    "current_package_spdx_paths": [
+      "BENCHMARK_DISCLAIMER.md",
+      "README.md",
+      "src/qesn/__init__.py",
+      "src/qesn/cli.py",
+      "src/qesn/config.py",
+      "src/qesn/diffusion.py",
+      "tests/__init__.py",
+      "tests/test_cli.py",
+      "tests/test_config.py",
+      "tests/test_diffusion.py"
+    ],
+    "legacy_mit_line_references": [
+      {
+        "path": "CHANGELOG.md",
+        "line_numbers": [
+          162,
+          178
+        ]
+      },
+      {
+        "path": "COMPLETION_REPORT.md",
+        "line_numbers": [
+          347,
+          431,
+          451
+        ]
+      },
+      {
+        "path": "CONTRIBUTING.md",
+        "line_numbers": [
+          217
+        ]
+      },
+      {
+        "path": "DEPLOYMENT_GUIDE.md",
+        "line_numbers": [
+          40
+        ]
+      },
+      {
+        "path": "INSTALLATION.md",
+        "line_numbers": [
+          6
+        ]
+      },
+      {
+        "path": "PROJECT_STATUS.md",
+        "line_numbers": [
+          326,
+          338
+        ]
+      },
+      {
+        "path": "QUICK_START.md",
+        "line_numbers": [
+          448
+        ]
+      },
+      {
+        "path": "README_OLD.md",
+        "line_numbers": [
+          3
+        ]
+      },
+      {
+        "path": "README_PROFESSIONAL.md",
+        "line_numbers": [
+          883
+        ]
+      },
+      {
+        "path": "create_optimized_notebooks.py",
+        "line_numbers": [
+          7
+        ]
+      },
+      {
+        "path": "demo_espectacular.py",
+        "line_numbers": [
+          13
+        ]
+      },
+      {
+        "path": "demo_espectacular_no_emoji.py",
+        "line_numbers": [
+          12
+        ]
+      },
+      {
+        "path": "demo_espectacular_optimized.py",
+        "line_numbers": [
+          7
+        ]
+      },
+      {
+        "path": "demo_profesional.py",
+        "line_numbers": [
+          12
+        ]
+      },
+      {
+        "path": "demo_simple.py",
+        "line_numbers": [
+          12
+        ]
+      },
+      {
+        "path": "examples/kaggle_submission.py",
+        "line_numbers": [
+          7
+        ]
+      },
+      {
+        "path": "huggingface_space/README.md",
+        "line_numbers": [
+          10,
+          85
+        ]
+      },
+      {
+        "path": "include/io/dataset_loader.h",
+        "line_numbers": [
+          5
+        ]
+      },
+      {
+        "path": "include/training/trainer.h",
+        "line_numbers": [
+          5
+        ]
+      },
+      {
+        "path": "install_dependencies.py",
+        "line_numbers": [
+          7
+        ]
+      },
+      {
+        "path": "install_dependencies_no_emoji.py",
+        "line_numbers": [
+          7
+        ]
+      },
+      {
+        "path": "notebooks/qesn_demo_2.py",
+        "line_numbers": [
+          7
+        ]
+      },
+      {
+        "path": "python/qesn_inference.py",
+        "line_numbers": [
+          7
+        ]
+      },
+      {
+        "path": "python/qesn_inference_optimized.py",
+        "line_numbers": [
+          7
+        ]
+      },
+      {
+        "path": "scripts/deploy_huggingface.py",
+        "line_numbers": [
+          7,
+          347
+        ]
+      },
+      {
+        "path": "scripts/deploy_kaggle.py",
+        "line_numbers": [
+          7
+        ]
+      },
+      {
+        "path": "scripts/train.bat",
+        "line_numbers": [
+          6
+        ]
+      },
+      {
+        "path": "src/io/dataset_loader.cpp",
+        "line_numbers": [
+          5
+        ]
+      },
+      {
+        "path": "src/main.cpp",
+        "line_numbers": [
+          136
+        ]
+      },
+      {
+        "path": "src/training/trainer.cpp",
+        "line_numbers": [
+          5
+        ]
+      },
+      {
+        "path": "update_all_demos.py",
+        "line_numbers": [
+          7
+        ]
+      },
+      {
+        "path": "validation_pipeline.py",
+        "line_numbers": [
+          7
+        ]
+      }
+    ],
+    "note": "See LICENSE_SCOPE.md; no blanket license conclusion for data, notebooks, historical documents, or model artifacts."
+  },
+  "validation": {
+    "static_model": "PASS: 144 baseline paths accounted for; 40/40 previously parseable Python ASTs unchanged; 2 pre-existing Python parse errors unchanged; all 60 files without in-file attribution (57 sidecar-only and 3 preserved/inventory-only) remain byte-identical; only planned paths changed.",
+    "git_diff_check": "PASS",
+    "citation_cff": "YAML parse PASS; CFF 1.2.0 fields verified; cffconvert unavailable, so formal schema validation not run.",
+    "pytest": {
+      "result": "PASS: 25 passed",
+      "command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1; PYTHONPATH=src; python -m pytest -q tests --basetemp D:/PROJECTS/.cognition/github-attribution-2026-11-04/repo52-pytest-tmp",
+      "note": "Global nengo pytest plugin and default Windows temp cleanup interfered with initial attempts; scoped invocation passed."
+    },
+    "package_build": {
+      "result": "PASS: sdist and wheel built",
+      "command": "python -m build --no-isolation --outdir D:/PROJECTS/.cognition/github-attribution-2026-11-04/repo52-dist"
+    },
+    "twine_check": "PASS for the built wheel and sdist.",
+    "cpp_build": "Not run: changes are comments/metadata only; CMake may FetchContent Eigen if not installed.",
+    "cryptographic_commit_signature": "not claimed",
+    "ci": "Not yet checked on GitHub for the new commit."
+  },
+  "files": [
+    {
+      "path": ".claude/settings.local.json",
+      "baseline_git_blob_oid": "d3d91dcb12ab88db7ee9dc83f8491580df7a6609",
+      "baseline_sha256": "f14def465a5350ea0bd18cb4eedd0df34f7e2c071a132f8a5abb3f9ed08e6412",
+      "attribution": {
+        "status": "preserved",
+        "method": "unchanged license, generic ignore, or local config; inventory only"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "baseline_git_blob_oid": "a814b32085de7e43846049829ca09a2128989fe3",
+      "baseline_sha256": "494c19897bb650fd84d70f1bed4d8d158c9298d3a5336e22a618d6e6bac72eeb",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Template material preserved; no exclusive authorship claim."
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "baseline_git_blob_oid": "54c06acd1e7917bec613dc7acbf8d27b04b5b239",
+      "baseline_sha256": "84899c6a441ec4b409aa3ad698d4c8a2ebed8a53701a0329b25140c7aa9f17aa",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Template material preserved; no exclusive authorship claim."
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "baseline_git_blob_oid": "9ee87b4a75fbe78d457854799ce75542d4747c19",
+      "baseline_sha256": "70ac3840cf2ef914e51d5543662d82f94050e303e4a6a3307a4ee68007717f90",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Template material preserved; no exclusive authorship claim."
+    },
+    {
+      "path": ".github/workflows/build.yml",
+      "baseline_git_blob_oid": "4acbcc8cb57250e389661e4612eb9875aa5bedf8",
+      "baseline_sha256": "f92916430994c1cfbbd06eafd5d984195056434da195ba403a0e5b0bdf5f303a",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Template material preserved; no exclusive authorship claim."
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "baseline_git_blob_oid": "e4b315d057561376ea8caed64e9282e4fa8f162b",
+      "baseline_sha256": "60d7c71b28026d47c320e9d30a1c20ad3d3b962e7153bd561a7fb08010cc9688",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Template material preserved; no exclusive authorship claim."
+    },
+    {
+      "path": ".gitignore",
+      "baseline_git_blob_oid": "9556e5d8ff82c38a8d05954b8466fd02cca3ba3a",
+      "baseline_sha256": "a6df6fdcf675da563495e395058341d1a2a70c3e51e25ae06f39535088dd4c91",
+      "attribution": {
+        "status": "preserved",
+        "method": "unchanged license, generic ignore, or local config; inventory only"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "BENCHMARK_DISCLAIMER.md",
+      "baseline_git_blob_oid": "939a815935e6f75e7be8d03732ebfde4fbc84321",
+      "baseline_sha256": "ca015d66be4acdbcc4df92c571ee92bb95520eba4cca317c8621c6e48c724881",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "Apache-2.0 file-level identifier supported by package release history",
+      "note": ""
+    },
+    {
+      "path": "CHANGELOG.md",
+      "baseline_git_blob_oid": "d8c7a6faa07be55b8ea9571224de08e386f0e481",
+      "baseline_sha256": "6537973044c3849fe9d2d33dacf36924cac094bf21b552780b94618459563640",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "CITATION.cff",
+      "baseline_git_blob_oid": "7369d539c52677bb9444e0d2e144bdeab3aad27e",
+      "baseline_sha256": "ecd394b0f1cba9b5271db87cd16dd5ab12f7ce78997a81d1f9b20ee0b19a1d90",
+      "attribution": {
+        "status": "in_file_native",
+        "method": "CFF author and ORCID; record date and original release date are in provenance/README."
+      },
+      "license_scope": "existing Apache-2.0 metadata preserved",
+      "note": ""
+    },
+    {
+      "path": "CMakeLists.txt",
+      "baseline_git_blob_oid": "764f45bd9f17b976a544ac2782a29d4e34a68e96",
+      "baseline_sha256": "406f57c385a849a3901f00edda1bfe7ecbb0152a1477991c4ebb1f93ae600a52",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "existing Apache-2.0 header preserved; no broader scope inference",
+      "note": ""
+    },
+    {
+      "path": "COMPLETION_REPORT.md",
+      "baseline_git_blob_oid": "13dfdbc2ffe8eec8ab17d190a5e9dfb5c422f1ad",
+      "baseline_sha256": "8b8bf3f84b4392de7a72b4584949da73f6a0fa0ebb532ffff35e77f95ba95bdb",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "baseline_git_blob_oid": "0a75aa3982ed6ebbefe2582baa2c124e79259b39",
+      "baseline_sha256": "e06fedeb6b0b30d1c0962e40f8abd35812c1d8fc951f5b352ab2d54b05ae4ff5",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "DATASET_SETUP.md",
+      "baseline_git_blob_oid": "bc9a377676fb8b36321f4c4ff46198bc49c91716",
+      "baseline_sha256": "843497f2f9f503728675137aefc24a49b8dcf18b3f4b764ff4cb4e75e0886208",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "DEPLOYMENT_GUIDE.md",
+      "baseline_git_blob_oid": "0d164a2ff8ffce86e80a368fab674e9f742f3e25",
+      "baseline_sha256": "7afc11510b0dbaa9e4da78d69e9e8a78ae1eb360cb2b6d019fa69affc1b50f53",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "EXECUTE_NOW.md",
+      "baseline_git_blob_oid": "ace239f9dbd8c1c1b99a839845bdb1867d86bf80",
+      "baseline_sha256": "ce4a5b23e3731a71b9484da2509bdb49e055c4f9a99c0324f8f2dc5cb1d18876",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "FINAL_IMPLEMENTATION_REPORT.md",
+      "baseline_git_blob_oid": "3153a13a14cefbb1c76b9a78bf3c591f369c845f",
+      "baseline_sha256": "03a2646881291ba48a4028ba489723e5f7b1d9236638447a115e52b71725b270",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "FINAL_SUMMARY.md",
+      "baseline_git_blob_oid": "7e85c76dd11f50c8b7a1644997dbb88e37c790eb",
+      "baseline_sha256": "48c352bc431c6a15cdc87f6c15d89ab1de395a87cc92ebd14fae4e299a8dadb2",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "GITHUB_SETUP_GUIDE.md",
+      "baseline_git_blob_oid": "d7bb3440121fbd03c80ec9d21694496027e1d8e2",
+      "baseline_sha256": "e211f8b04f483390161a3854918042365aa42cbc3f1d78bd92bbf00915434d8a",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "HUGGINGFACE_INSTRUCTIONS.md",
+      "baseline_git_blob_oid": "08f1938893d9c34c090c5ca72e9ed976630e74a6",
+      "baseline_sha256": "bf7aefb8ab0f8750b2fc69c8860e6cf4a5b0cfe647723bcac9f698eb467151dc",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "INSTALACION_RAPIDA.md",
+      "baseline_git_blob_oid": "f1ab13baa79b7cf5bf6c544640ad54d11eed45e0",
+      "baseline_sha256": "ef618c297131a7a256856b38e3812b0c735e6087ab7cdcbc2539c49377674871",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "INSTALLATION.md",
+      "baseline_git_blob_oid": "e6c1b6e47a7edc3367a318aca0ce09555f0cdcbb",
+      "baseline_sha256": "54468d88db55b785eb5eefe5b3a65dccba0be60caf89b0a6ea90b9c3895e3868",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "LICENSE",
+      "baseline_git_blob_oid": "115eca6eb8f3fb06c7b611c9ab375168a7bee714",
+      "baseline_sha256": "36e78168f9748ea11def343ca507f64d8054f0424395dfdf20d8a26a7b7e2674",
+      "attribution": {
+        "status": "preserved",
+        "method": "unchanged license, generic ignore, or local config; inventory only"
+      },
+      "license_scope": "existing root Apache-2.0 license preserved; global file scope unresolved",
+      "note": ""
+    },
+    {
+      "path": "Mejorar_Precision_Modelo_Cuantico.md",
+      "baseline_git_blob_oid": "1c0733f8591807318a27e8bd3cfc40b4d638598a",
+      "baseline_sha256": "717527218e7ae4ade7bc2c897a28e2ca01bbde85da5f2fcbfb9e6ea29f6a343f",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "NOTEBOOKS_OPTIMIZADOS_RESUMEN.md",
+      "baseline_git_blob_oid": "1915924383ae25650abce9a53ef9c8d21b5d89ad",
+      "baseline_sha256": "80d165390339d255b1b4ef8dd17eaf049f51e0afd14e03661c519d6f67dbee2a",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "PRE_BUILD_CHECKLIST.md",
+      "baseline_git_blob_oid": "158b50a4abfa339f1e0176b7154a1bfa45277a7d",
+      "baseline_sha256": "a2284c3955a69115488dbfd47eb2ba9241965d6d6f7badf521cba1393f409e2d",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "PROJECT_STATUS.md",
+      "baseline_git_blob_oid": "f78d21074a11e28d29929e87ec661ec8d9a5f6b2",
+      "baseline_sha256": "a94ec6e94ef11cc2cebb09260ea3069559c64f9f79a95e97d8bcb91c899d8546",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "QUICK_START.md",
+      "baseline_git_blob_oid": "002eeb81bc4a9bd77590e1b4bacfb4838357377a",
+      "baseline_sha256": "c402b0fd5ba3f3d9c809557596ebbc1e6db7763e606889c49c5a47c5b65662d3",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "QUICK_START_GUIDE.md",
+      "baseline_git_blob_oid": "f63beaba67f223e868d00d71101ca755040aa835",
+      "baseline_sha256": "33922382d2ebac0ca2124d4bd850d6f7d2da08c58b993d7284ede03239897b14",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "README.md",
+      "baseline_git_blob_oid": "f13ad3def43d1fde5c4717a9a306cb75a8a73a16",
+      "baseline_sha256": "2efcb6844c883fed316a0a5e31801ad35fc86ee21e8ea86ebdee8bbf75c6c999",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "Apache-2.0 file-level identifier supported by package release history",
+      "note": ""
+    },
+    {
+      "path": "README_GITHUB.md",
+      "baseline_git_blob_oid": "039760d9b65970e5e130bb269eeb15152c6b9e06",
+      "baseline_sha256": "5af032e1fd47abcfd94073a4b3a177e8226461afb94ca5acab0804028da2389d",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "README_NEW.md",
+      "baseline_git_blob_oid": "5c711b297d0cde47e3af038e0a6b1c0d3042067d",
+      "baseline_sha256": "080e8630450b6568e858367870a468ed28bd7c6361022eb1a5a39a7a2ee22163",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "README_OLD.md",
+      "baseline_git_blob_oid": "d474045d1f9edbe20096256747b4840ecf16fd55",
+      "baseline_sha256": "ac1c5f743a0225dc2a5864ee457c22c056b50e32e6b6e31b0c2747bebcee9aba",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "README_PROFESSIONAL.md",
+      "baseline_git_blob_oid": "00c7f7467eb3206697f40fe80fb28b63a28e864a",
+      "baseline_sha256": "7fc2b1510b14cd626f2063d3a19b498056038067ebca09e8c2f18e8a39e5cb89",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "RESUMEN_MEJORAS_IMPLEMENTADAS.md",
+      "baseline_git_blob_oid": "51c8cdf2220562b1f7d61d02fce1216f57ae3d71",
+      "baseline_sha256": "e373c93ed7b7e8dbe263b90bc7f59155561a367643db175ff676ff52eb337322",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "create_demo_data.py",
+      "baseline_git_blob_oid": "87b53e68340d4c5c936e76250955b6a2ade4f31f",
+      "baseline_sha256": "9e9711725adfd158d6f9c61f8c548c6ca618f6bd7eafc8b0d0c59abd68cf1db2",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "create_demo_weights.py",
+      "baseline_git_blob_oid": "f4bf9197e89855774c6942d22afdb28e791d4d83",
+      "baseline_sha256": "ddc152f8c3576132383216a5cfc108475377eaa59eda88847401a0bb5b5d3b2a",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "create_optimized_notebooks.py",
+      "baseline_git_blob_oid": "a82ea9770784037bc6bef5723c9cdeaf1d87e33a",
+      "baseline_sha256": "e4b0859060296717f7d42765c2156f55f1f1ed138c0c58199de14643652b5a5d",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "create_space_final.py",
+      "baseline_git_blob_oid": "ab63f33126b98082e99d680dd5265a48a7404bc2",
+      "baseline_sha256": "0238cc08194f0f1c1eb5b9deacbb0f67831196f6a7e79286f35acfbfa9e9838f",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "create_space_simple.py",
+      "baseline_git_blob_oid": "79baf229d5d61a5a063f44614bf835943313adb7",
+      "baseline_sha256": "c7acdff2af39f00f1a1df942f5099e89fe2800ba16cf25bbf1eef91db9d972d1",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "data/exposure_dataset/labels.csv",
+      "baseline_git_blob_oid": "b06cdce339a8eaf9638234a7abb6f97cf70dc6d7",
+      "baseline_sha256": "08c9aba27d13972013eaf315eaec318752fb3a6ab2980bac929f6f3e6740cbfa",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Demo directory; generator documents synthetic data, but exact provenance of tracked bytes was not independently reproduced."
+    },
+    {
+      "path": "data/exposure_dataset/results/qesn_adaptive_predictions.parquet",
+      "baseline_git_blob_oid": "c3b405bf8a3bce753d39490d96d9345146fdcde7",
+      "baseline_sha256": "4cd346e60b124ac585aa831c87bbe09f2438cfa56f6b25a4f44918a12e5510fd",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Demo directory; generator documents synthetic data, but exact provenance of tracked bytes was not independently reproduced."
+    },
+    {
+      "path": "data/exposure_dataset/results/qesn_classification_report.txt",
+      "baseline_git_blob_oid": "de8e94f005fd6fc32ac8dead23be310a0bcf18fe",
+      "baseline_sha256": "7557177abf2a73abb353993da42ce064edb102340b1263479b79ea30809edde3",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Demo directory; generator documents synthetic data, but exact provenance of tracked bytes was not independently reproduced."
+    },
+    {
+      "path": "data/exposure_dataset/results/qesn_confusion_matrix.npy",
+      "baseline_git_blob_oid": "3078f02a6f7caa746415ce0764951eb57c4fbcbe",
+      "baseline_sha256": "a85f2b07757f483775b9ff159ba7a5761160f39c7020537f4e496ac94a776fb4",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Demo directory; generator documents synthetic data, but exact provenance of tracked bytes was not independently reproduced."
+    },
+    {
+      "path": "data/exposure_dataset/tracking/video_000.parquet",
+      "baseline_git_blob_oid": "36914d0bfe976b4440b6d113c5a37f4ea4292eb5",
+      "baseline_sha256": "eba17011e85855364f6cd421f8a8baf514949cd62afd20d8c81e6427cc610b1f",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Demo directory; generator documents synthetic data, but exact provenance of tracked bytes was not independently reproduced."
+    },
+    {
+      "path": "data/exposure_dataset/tracking/video_001.parquet",
+      "baseline_git_blob_oid": "c492a5b2a9cb7baaccd51b001f05f056e50142ac",
+      "baseline_sha256": "e8f22ba5ee90d072e62e7fdc6cb0da55dee1b0c625cc0b5a1bcce854559a9a08",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Demo directory; generator documents synthetic data, but exact provenance of tracked bytes was not independently reproduced."
+    },
+    {
+      "path": "data/exposure_dataset/tracking/video_002.parquet",
+      "baseline_git_blob_oid": "6abe4db12caeeffe1875c8d02c7d83fb20861053",
+      "baseline_sha256": "b1a9b138a12b380bda03a2f1c3cf60ac324119a574fce6eee18d68ff64bc6a0a",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Demo directory; generator documents synthetic data, but exact provenance of tracked bytes was not independently reproduced."
+    },
+    {
+      "path": "data/exposure_dataset/tracking/video_003.parquet",
+      "baseline_git_blob_oid": "876d7152987a6e042a0fbf4263a567b2c9446d77",
+      "baseline_sha256": "d206385c900330cfb92462c162f65bd3d25a117f9fd6601a19ce0a0ca60cd7bb",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Demo directory; generator documents synthetic data, but exact provenance of tracked bytes was not independently reproduced."
+    },
+    {
+      "path": "data/exposure_dataset/tracking/video_004.parquet",
+      "baseline_git_blob_oid": "ada5572265f7ae3cb66fdb5c394af007032d3dc6",
+      "baseline_sha256": "c723c3db54db1bb0bc0aca6eee0ed473655eaf4207659cac0d5962e0eb7e9e94",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Demo directory; generator documents synthetic data, but exact provenance of tracked bytes was not independently reproduced."
+    },
+    {
+      "path": "data/exposure_dataset/tracking/video_005.parquet",
+      "baseline_git_blob_oid": "1f6238769c782ecde704215053eaabb2a713ac0f",
+      "baseline_sha256": "6ff75c5178b7b8402898a6944d5a67293cdce45a19f2287c94d75228bfd77ede",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Demo directory; generator documents synthetic data, but exact provenance of tracked bytes was not independently reproduced."
+    },
+    {
+      "path": "data/exposure_dataset/tracking/video_006.parquet",
+      "baseline_git_blob_oid": "1086c36f8120a678486e59a4d56a298ee68c21d6",
+      "baseline_sha256": "9e02d5d2e8981d1fe14140bbfa281510652cf830d6690afe6d92e6d2940825fd",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Demo directory; generator documents synthetic data, but exact provenance of tracked bytes was not independently reproduced."
+    },
+    {
+      "path": "data/exposure_dataset/tracking/video_007.parquet",
+      "baseline_git_blob_oid": "729ceb70beb2a46305d127903a3bcdaef83af756",
+      "baseline_sha256": "6ef4e7b9d013f0f350a21328ff4bccf2393537b8a976933eedf68267251e558a",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Demo directory; generator documents synthetic data, but exact provenance of tracked bytes was not independently reproduced."
+    },
+    {
+      "path": "data/exposure_dataset/tracking/video_008.parquet",
+      "baseline_git_blob_oid": "a77959f8c744c812b85e2fcfad7d69b85c2623f6",
+      "baseline_sha256": "332b78f78f39b8d68baa13dc241ac0c46fecd00528c685f30a51c97b6dc646f1",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Demo directory; generator documents synthetic data, but exact provenance of tracked bytes was not independently reproduced."
+    },
+    {
+      "path": "data/exposure_dataset/tracking/video_009.parquet",
+      "baseline_git_blob_oid": "9f882c418082e41c255bb6459c6c45a094427a41",
+      "baseline_sha256": "edc25b93ac2ab1b064607617f80e4e8146b8a1b56e392416dadc114ebc3659dd",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Demo directory; generator documents synthetic data, but exact provenance of tracked bytes was not independently reproduced."
+    },
+    {
+      "path": "dataset_config.py",
+      "baseline_git_blob_oid": "1aabf8d30a574bb8561a2c525a3341fe6ed96dc3",
+      "baseline_sha256": "09cd946f2d9572ea2accd2694e4b6be840300c1c4201df5d76191bba41fc9beb",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "demo_espectacular.py",
+      "baseline_git_blob_oid": "8819560f6f66e72daed1abfa55f878e31ad0ab53",
+      "baseline_sha256": "2582d7e1f4081b5a42d269cf279bc3fa696bea7c8cc0591fda6062ecfafea785",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "demo_espectacular_no_emoji.py",
+      "baseline_git_blob_oid": "c862957c1657bba1ceb296d62965540c46d3b6fd",
+      "baseline_sha256": "709d970e42d1d0a26872783b135bf2641c923c52dab00d60bcddde5bf3ac860e",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "demo_espectacular_optimized.py",
+      "baseline_git_blob_oid": "854d2dfe9da20f648d0b46ed5d416d5dc3d9bcf5",
+      "baseline_sha256": "5a70053dec7b07ff2925dd6c9760424c04a758660cfdb6c809b39e293380f2ca",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "demo_profesional.py",
+      "baseline_git_blob_oid": "f9d14bd3dd43a5a5bf48994f107fd5379aa76ec2",
+      "baseline_sha256": "046704c8a77803ce1e8edb5ffb15e2d94e92a88a7ed90e0b32d8a74e6c5193d4",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "demo_simple.py",
+      "baseline_git_blob_oid": "a4b3670beadd7904549f1a1c862ce0b0a349a496",
+      "baseline_sha256": "d807dd858fc6fdda5d1410d58c3c2788d7c92d7e259d5823cd53f6ab4491ada8",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "demos/QESN_Colab_Demo.ipynb",
+      "baseline_git_blob_oid": "bab9b2d373083bd5381722d743d10135c92e8b56",
+      "baseline_sha256": "f651a6ccbad0cbe39c919fd1879124c3c121bd1a0edeaf20e6f48d945c13bcd8",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Structured/generated or binary artifact preserved and inventoried by sidecar."
+    },
+    {
+      "path": "demos/README.md",
+      "baseline_git_blob_oid": "ea18df1d518f2097010029a60c4445b539c5940a",
+      "baseline_sha256": "10049f280339605b005a648e123fb73c87135d77861c159424ea6266ca6b455f",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "demos/codespaces/QESN_Codespaces_Demo.py",
+      "baseline_git_blob_oid": "48b0e09d53900644b6bac5afa716e857c11e0050",
+      "baseline_sha256": "596de8a4512a3eafcc38e87921723ffcf3d54d7163d911aeff95545416a48743",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "demos/colab/QESN_Colab_Demo.py",
+      "baseline_git_blob_oid": "67a144e3d685be02d1c90eb6b8eadd5cd0d19673",
+      "baseline_sha256": "a2fdc810db77a592c562f55ea1308d2cda4133f78d22fd09edff4b5804d6a8b3",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "demos/huggingface/README.md",
+      "baseline_git_blob_oid": "e29b7d7efab57b234199f2858fc9d6439e64594c",
+      "baseline_sha256": "4132a5cbbe2e2265d8429727c25037a91d5194bd8e112f8891db9ea28afa65dc",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "demos/huggingface/app.py",
+      "baseline_git_blob_oid": "50471e83248a76b005644df2ec1e163b1eb88599",
+      "baseline_sha256": "6240442d1c7d58016ad34960f3dced9f21a5cc30cef230fdebcef5329cdb34ba",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "demos/huggingface/requirements.txt",
+      "baseline_git_blob_oid": "7efffd8b26de328c3e8d1fde9c31c5f771016c8f",
+      "baseline_sha256": "870f9cd561d272729ce899a6748e619a317660448f020f4f70f9425907479d5d",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "demos/kaggle/QESN_Kaggle_Demo.py",
+      "baseline_git_blob_oid": "c7f75c1ddaca48301ef6bfbbf671018c858762ef",
+      "baseline_sha256": "f6dc939dd446000851fbb4425dd2a5db6f19317775733b04b2aaf0557ac5b2a2",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "docs/EXECUTIVE_SUMMARY.md",
+      "baseline_git_blob_oid": "302161cce7805ecd6ffc7202cf80e65987bfe838",
+      "baseline_sha256": "d697f65b6c00d0c1548d1273c4047767083f76c15ee720ae52c800245554028e",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "docs/MASTER_PLAN.md",
+      "baseline_git_blob_oid": "143130a2041fc217c5964109f6e0c1b7d81c27fe",
+      "baseline_sha256": "d5c99ec56f5b97854f2e280890910c3cf293f46a2c0ed0e4108ea93421e19b40",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "docs/PHYSICS_THEORY.md",
+      "baseline_git_blob_oid": "886cb5895f1ab49a894d385209d00b8d6ce6c3dc",
+      "baseline_sha256": "492ecdc3c16a11da35ca9d011f3df9de77e264772e63a4a3add0a27a2c596ee9",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "docs/reference/templates/AGENTS.dev.md",
+      "baseline_git_blob_oid": "ea5b4c19228aac4c4a7fbb55c5136cd5fdbf06f4",
+      "baseline_sha256": "3bb17ab484f02c6d08546ad4f8356d5c5b0c0e86cc4d03022734109e85dd26dc",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Template material preserved; no exclusive authorship claim."
+    },
+    {
+      "path": "docs/reference/templates/AGENTS.md",
+      "baseline_git_blob_oid": "619ce4c56612bcbf71e9127df1d0e1b8552cc235",
+      "baseline_sha256": "dd768d15c08791a00840b7937dc642ba9825a1b351524a2015fcafb4b94c65c7",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Template material preserved; no exclusive authorship claim."
+    },
+    {
+      "path": "docs/reference/templates/BOOT.md",
+      "baseline_git_blob_oid": "a5edf43ef49b313a66873cd284880a35ed359e73",
+      "baseline_sha256": "d65cfe833ef6826ef9cddafd6499b6dce55c5d0bb56088434a54f77054f5430e",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Template material preserved; no exclusive authorship claim."
+    },
+    {
+      "path": "docs/reference/templates/BOOTSTRAP.md",
+      "baseline_git_blob_oid": "de92e9a9e6a7f8ffb1014db2a96f12f47c49982f",
+      "baseline_sha256": "0bc3ec00ada2949eda163be6730e2b2b69fb89080ebbea366439b2c45903b405",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Template material preserved; no exclusive authorship claim."
+    },
+    {
+      "path": "docs/reference/templates/HEARTBEAT.md",
+      "baseline_git_blob_oid": "58b844f91bdab7ce27bde90163f60f1c3fceccb4",
+      "baseline_sha256": "2435dd405f798e5c34b5f1dd5fcb4a12a9fad375fd09e7c4c1e0d55c1d0ae88e",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Template material preserved; no exclusive authorship claim."
+    },
+    {
+      "path": "docs/reference/templates/IDENTITY.dev.md",
+      "baseline_git_blob_oid": "abc0c20e4702c542b03ed487edd680606fe2652c",
+      "baseline_sha256": "f26b6d1e03a91775bb0291a78b23e870b2df57db0ceb006f07b218e015fd37eb",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Template material preserved; no exclusive authorship claim."
+    },
+    {
+      "path": "docs/reference/templates/IDENTITY.md",
+      "baseline_git_blob_oid": "9ec2dd62c7fc001191af7a58e138aa438e221a27",
+      "baseline_sha256": "6f6833378909052dd2affa60c50c66ed6f8f4367ec45c5cc633e6108567652cd",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Template material preserved; no exclusive authorship claim."
+    },
+    {
+      "path": "docs/reference/templates/SOUL.dev.md",
+      "baseline_git_blob_oid": "eb36235d97159c16402a21402c629e6281534bf1",
+      "baseline_sha256": "8ba3131f4396c4f3ec2c22f3d1147f218453b0c51e73305e681d419dea97c410",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Template material preserved; no exclusive authorship claim."
+    },
+    {
+      "path": "docs/reference/templates/SOUL.md",
+      "baseline_git_blob_oid": "a9d8edfd2ed1bdd34fea22b7d85c9e0e146faeba",
+      "baseline_sha256": "7bdb267d5e9e905507bf836c2d3a2029921942383ac55cffd25eaed11433616c",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Template material preserved; no exclusive authorship claim."
+    },
+    {
+      "path": "docs/reference/templates/TOOLS.dev.md",
+      "baseline_git_blob_oid": "317f7468429ad26dab10106d5dbdd3a226941fe7",
+      "baseline_sha256": "3d41097967c9811637855664f978c02107a28b6d811ba49941a8f96f0720cd45",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Template material preserved; no exclusive authorship claim."
+    },
+    {
+      "path": "docs/reference/templates/TOOLS.md",
+      "baseline_git_blob_oid": "326b6972860c5ca2a2c6ba7708922286347f7bb5",
+      "baseline_sha256": "eed204d57e7221ae0455a87272da2b0730d6aee6ddd2446a851703276e4a96b7",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Template material preserved; no exclusive authorship claim."
+    },
+    {
+      "path": "docs/reference/templates/USER.dev.md",
+      "baseline_git_blob_oid": "50a7b7a88b09dbea01e12d249de77a104c0e7a6b",
+      "baseline_sha256": "f78f58bdbef10afbba0bc2673832eaa12e0c26270906d04a56584d5620af6fdf",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Template material preserved; no exclusive authorship claim."
+    },
+    {
+      "path": "docs/reference/templates/USER.md",
+      "baseline_git_blob_oid": "682e99ae6cc030c2161a9e5e6f54c1d6ba52e790",
+      "baseline_sha256": "cec843c77345129132b32a80d9d80fd8922175a8fe42df5a474e32886294a5fd",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Template material preserved; no exclusive authorship claim."
+    },
+    {
+      "path": "examples/kaggle_submission.py",
+      "baseline_git_blob_oid": "cd9da2f900bde19550064ef9f1b1747be4e513c1",
+      "baseline_sha256": "361012bfd4a1f07cea0ee1a0ed6645fcb747a977b68aa42f73f8d8cbb293aa66",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "examples/quick_demo.py",
+      "baseline_git_blob_oid": "6040b9dd8f3b90e4c6188139fe3680de44a2dbe4",
+      "baseline_sha256": "5c24a40c08fc6337af026191c2e1c31f12281ae4fbd7a130db52a94358b5f0d6",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "huggingface_space/README.md",
+      "baseline_git_blob_oid": "7bad33d62815c6807193709c78c72d138997824d",
+      "baseline_sha256": "acefb6b82db493a2811fa244844c30a9844d5b062c93ff02dfd28b4f4aa649c7",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "huggingface_space/app.py",
+      "baseline_git_blob_oid": "0233f4545fa2c2095f8c25424042e6e14a5c2c10",
+      "baseline_sha256": "78e5ad345fdb88734c06db88f7cfc0056b0a1ea6ee3a140682de2f64230cb3f6",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "huggingface_space/requirements.txt",
+      "baseline_git_blob_oid": "6eb0b98442995e710bd0952697c77e7b679a7c46",
+      "baseline_sha256": "9dd3dfcc2616a889c9c3322eebee8b24114fb9ec6df1d41244017137c5cf4ab1",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "include/core/quantum_foam.h",
+      "baseline_git_blob_oid": "00a6ae5dd75baa50b4dec8e6209f2e72402f8232",
+      "baseline_sha256": "73b4daa95ad4ebaffb7705b93e1a57ab1ed5a15848a744d36c312cbb683ba8eb",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "include/core/quantum_neuron.h",
+      "baseline_git_blob_oid": "4bb31ebeaa6836a241155beb83c32fe49722912f",
+      "baseline_sha256": "92e851522447be3f99a26f74b5c01d301c4ef67ea5b3b4ea21b9493dd9c1a250",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "include/io/dataset_loader.h",
+      "baseline_git_blob_oid": "225549bb3ef49066c97c5537d7b41a4cff458e1e",
+      "baseline_sha256": "44c0261782a59f54d18975de753b88bf4c87f102c304712048ea1c80add0b8c2",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "include/training/trainer.h",
+      "baseline_git_blob_oid": "7568536e8c229922ad6c5694ef06c3982229cd86",
+      "baseline_sha256": "1ee7cd4c371d58e7c55e7135ed2a0703e830163f1e96aadd66d58fc47de89dac",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "install_demo.bat",
+      "baseline_git_blob_oid": "a84ee43a723be60fcca1490b5d8397b807ee456b",
+      "baseline_sha256": "ebde64ad1ad20609dd0345a63852d11ab0d782d6b95ea5156a8174ec77b23589",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "install_dependencies.bat",
+      "baseline_git_blob_oid": "8b721487b9f0d6b4ca0bd24b9173d55d2ba792bc",
+      "baseline_sha256": "8135f7986ca070b84c92a777f1f754d3d2288ea56049147fac18a48f11ca7f83",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "install_dependencies.py",
+      "baseline_git_blob_oid": "46c6628f042b0ab4e42eb743f41e4220f0c0b19d",
+      "baseline_sha256": "fc8d8d68abf342d39dcb52d8d6400df48925caabbac9eedf1f2edf2e8e5964d0",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "install_dependencies_no_emoji.py",
+      "baseline_git_blob_oid": "5794df67d5026b88cbcf15e3a9b378ff3899a968",
+      "baseline_sha256": "4369c89497104dd34909b8e8af7686cc93b53401b6deb514ed66729b4f3e176e",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "kaggle_model/.gitkeep",
+      "baseline_git_blob_oid": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "baseline_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "kaggle_model/model_config.json",
+      "baseline_git_blob_oid": "d02c0556e595a6c60b83284225186e2fab62c3e3",
+      "baseline_sha256": "d9ddc2966ed3722bd1436e854c932dc290296ce6fa258b328f4b5f7272189d91",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "best_accuracy value retained but unverified; config preserved."
+    },
+    {
+      "path": "kaggle_model/model_weights.bin",
+      "baseline_git_blob_oid": "ab61df0cd2230d6ec828019605a6492e241822cf",
+      "baseline_sha256": "92e32a2641a66c1b8276fa5c83272a881fc56007440aa4a9cad698bedb7080f6",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "64x64 binary preserved; current demo generator outputs 32x32; training provenance unknown."
+    },
+    {
+      "path": "notebooks/IMPLEMENTATION_SUMMARY_90_95.md",
+      "baseline_git_blob_oid": "e65d5420013def648a714bdcb42d2157c245abd7",
+      "baseline_sha256": "b44750a168f243e3dbafddba7971f052a20b692966817acdd9f0b1cea5d9cc89",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "notebooks/INSTRUCCIONES_DEMO.txt",
+      "baseline_git_blob_oid": "e7234553d24b5ed32b251630f196fa65db4b1986",
+      "baseline_sha256": "816727fbe221b857ffde8b3bf07bef438d4159681d1978b6193e02048f93736b",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "UTF-16LE instruction file preserved; metadata recorded in sidecar."
+    },
+    {
+      "path": "notebooks/NOTEBOOK_FIX_SUMMARY.md",
+      "baseline_git_blob_oid": "277500ec4bf28d1d5c6babd6dc817543382dd362",
+      "baseline_sha256": "be6dbfaf217468039077b110c939247215327aec5671daab2daa82eeef051020",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "notebooks/QESN_Complete_Classification_Demo.ipynb",
+      "baseline_git_blob_oid": "19db049e0fa957c3a100464db4537792fa105606",
+      "baseline_sha256": "7586a8d7a26ab8cc017467272135240bd648f0c9eecd714dc40dfadbdf690ae3",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Structured/generated or binary artifact preserved and inventoried by sidecar."
+    },
+    {
+      "path": "notebooks/QESN_Demo_Accuracy.ipynb",
+      "baseline_git_blob_oid": "d834a77365b647e80febdd8f2010169204c71a48",
+      "baseline_sha256": "47c898a0bfbefee951d514a75a1071201a953fbf0568718ed428c5f3f78f8d91",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Structured/generated or binary artifact preserved and inventoried by sidecar."
+    },
+    {
+      "path": "notebooks/QESN_Professional_Quantum_Demo.ipynb",
+      "baseline_git_blob_oid": "0a39cd13a698ab516f6e69d5757157a9dfdacb62",
+      "baseline_sha256": "ff3cd7a178467882bd5ac6c90b31d60ccdefe8ad2af27641176c4f35ca4a610e",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Structured/generated or binary artifact preserved and inventoried by sidecar."
+    },
+    {
+      "path": "notebooks/QESN_Professional_Quantum_Demo_OPTIMIZED.ipynb",
+      "baseline_git_blob_oid": "9ab3d754ecf43639bef8cea6e495fee9536f8e65",
+      "baseline_sha256": "e17a370552475fa69ae5d1597af053c1e7d0dd90d1b0615d7e19a14507de29e3",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Structured/generated or binary artifact preserved and inventoried by sidecar."
+    },
+    {
+      "path": "notebooks/QESN_Quantum_Demo_3.ipynb",
+      "baseline_git_blob_oid": "9ab3d754ecf43639bef8cea6e495fee9536f8e65",
+      "baseline_sha256": "e17a370552475fa69ae5d1597af053c1e7d0dd90d1b0615d7e19a14507de29e3",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Structured/generated or binary artifact preserved and inventoried by sidecar."
+    },
+    {
+      "path": "notebooks/README.md",
+      "baseline_git_blob_oid": "673afbc4dd0b608638cc7f27e9298982340877d6",
+      "baseline_sha256": "58a5809644850c246f6e040f30cd33d5c5b26947688245a4b17f3a43a8e4c85b",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "notebooks/qesn_complete_classification_demo.py",
+      "baseline_git_blob_oid": "9bf67868ab10a433054cd8983f66409f0e38ec2d",
+      "baseline_sha256": "7818987d5fddb92227ac81df1b951875a1482d7e345361e930ddedb03b5d3547",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "notebooks/qesn_demo_2.py",
+      "baseline_git_blob_oid": "ca1d686ac0fee6eb2071ec6c160be58c93436dec",
+      "baseline_sha256": "7d85a6adf179b4b80c93612f5fb93b41d51420de8ee6fdd9131a09a22fa55058",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "pyproject.toml",
+      "baseline_git_blob_oid": "e2daf8fe8a8eae49702fe418236f4cfc50a9bc86",
+      "baseline_sha256": "841bc3a40889962c168f2627e3fa0e2b54441d2b9e86d8a40ca64e144a10b301",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "existing Apache-2.0 metadata preserved",
+      "note": ""
+    },
+    {
+      "path": "python/model_loader.py",
+      "baseline_git_blob_oid": "6558892ecbcbf40e7c70ff5145af413181bf60ad",
+      "baseline_sha256": "444a267e5049aca90865d0652ce09cef09d4fa4617bdabd15a1d70cf9c283af6",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "python/qesn_inference.py",
+      "baseline_git_blob_oid": "8ac5ea84d5348b86cade71acfa29d10b18f2f88a",
+      "baseline_sha256": "e5f9c5bc0c1651adfb3f99cdeac8610cfb960424d9da12f0d1416387cc44e513",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "python/qesn_inference_optimized.py",
+      "baseline_git_blob_oid": "401f7c729d45e76dd55663aaed2aee37e74a4407",
+      "baseline_sha256": "030e0d35127645e5eb9be6297c51433221b89eed408dcd198542ece1b788fa1c",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "python/quantum_foam.py",
+      "baseline_git_blob_oid": "e8c6ca4f649fe7493f645f854aac669dadcb4aa6",
+      "baseline_sha256": "7c042e552b37429ea948c5dbb4d2d2923dbb176a3172d799b631a0430928e626",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "qesn_academic_paper.pdf",
+      "baseline_git_blob_oid": "0b18b16e002ad191dcb0536d6d9e4b7089ff12f9",
+      "baseline_sha256": "d02f65ab16d4e865efb060e28587775a3005bb7db8c05634445165a5b5f1dcd9",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": "Structured/generated or binary artifact preserved and inventoried by sidecar."
+    },
+    {
+      "path": "requirements.txt",
+      "baseline_git_blob_oid": "b28e2982d2982b275397d51dacf2cc0de176298c",
+      "baseline_sha256": "b93baaf05fa6e9f9bb0915813f0c6b379c2078635f63c7493371881dea8bd3da",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "scripts/build.bat",
+      "baseline_git_blob_oid": "0e3a274730eb079a1a87bdedc3242eeca0c3552c",
+      "baseline_sha256": "00710f0a248f3a0cecbc12ed5ed5e6e33a159cd22d7887fd3289bc48fbacef07",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "scripts/deploy_huggingface.py",
+      "baseline_git_blob_oid": "46cb256df7a0a3c2ae6d1380d154b38b71ea276a",
+      "baseline_sha256": "aef5715875efe856c6e16234301cb8417fb85f5a5ea28694fa3a160bb737503d",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "scripts/deploy_kaggle.py",
+      "baseline_git_blob_oid": "09392c6facff1de5b23f874cd3abed0ea611f219",
+      "baseline_sha256": "beb9149e5414377cd7fd4bdf9448f9618095b43b1517bf589efcf1ede3f1e611",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "scripts/preprocess_parquet.py",
+      "baseline_git_blob_oid": "8bee05c1f68ba1145e505e09d9d78fa18914e5d7",
+      "baseline_sha256": "cc664ecb3ef9a89eb39b3bd22f9e2d37d877e5a5e4f2ed78e745cdee635c4a2d",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "scripts/train.bat",
+      "baseline_git_blob_oid": "17a9f43dc5c641b19e7a28961dfe6c78220ae927",
+      "baseline_sha256": "3ae0b4b907a30941e4619a6fa64617670e3d49bc045de947362185ae51e13adc",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "setup_dataset.bat",
+      "baseline_git_blob_oid": "dc866325252406e32a8cc395a4e47ad6d1572785",
+      "baseline_sha256": "ddd97f85fb474a1352e832e8ded3199e019c7669a48ff1750670a3b8866264fb",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "setup_dataset.py",
+      "baseline_git_blob_oid": "c351549fdde579830690b290697dbd219c2f0471",
+      "baseline_sha256": "2727ad7a204e20acf1274c218ecccc972eb4c8b8608ef81df1554b94662043e3",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "setup_github.bat",
+      "baseline_git_blob_oid": "fed5cd61141743f2998f12ab171a22e7a08feb71",
+      "baseline_sha256": "ec767cd0c0a5da3563999cd6555419b3ed4504ca45f454439001c96eb318fda5",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "setup_github.py",
+      "baseline_git_blob_oid": "d016c752b6b39fe88e02d6c56af0b7cba869e452",
+      "baseline_sha256": "7148a42787794a16d7315791b260c9518ec30176a45751698a4be12f43212246",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "src/core/quantum_foam.cpp",
+      "baseline_git_blob_oid": "3d9f26c598807401ac8c1a75dce3f554f4dc54ce",
+      "baseline_sha256": "5973ac8aaf30526bde162ec75ac4fd06702a12cb85c7b5b47e3f6d22c89f9460",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "src/core/quantum_neuron.cpp",
+      "baseline_git_blob_oid": "a908cac493913d0e72859ce67ec0859c56019ff0",
+      "baseline_sha256": "4a2f4027df518811d0cbf663f4f3dcaf84b5543d79ab705e437b4275ccb2e6d1",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "src/io/dataset_loader.cpp",
+      "baseline_git_blob_oid": "47e60ae0c71c7a7939da6d4012445902ef97d9ec",
+      "baseline_sha256": "0e63ef8ccc8c761da53b327c797b1777c3acb2b9aabc303589180cbaf5b869de",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "src/main.cpp",
+      "baseline_git_blob_oid": "ab34bdf533ff112754abcf8967d3d7a249a0c8b1",
+      "baseline_sha256": "c01a7e9a35ab64286cd9c92e3ad3ea6ef16981f6ccfeda4e3a0533036ccd9c4f",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "src/qesn/__init__.py",
+      "baseline_git_blob_oid": "90eb8ad7deb82d08222a8ddf4f5c6aa114449f75",
+      "baseline_sha256": "6f0466227436a420a18bb7156732dd20eb938a66e868edd3a06ca396066dfe7c",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "Apache-2.0 file-level identifier supported by package release history",
+      "note": ""
+    },
+    {
+      "path": "src/qesn/cli.py",
+      "baseline_git_blob_oid": "4779a7a855bcaff3ed1fffdf73d8d42de7ec6867",
+      "baseline_sha256": "af7b071dacec7dd52c1dcd94e036c47a9a03546ec14892e7c2b65fde6c2842e3",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "Apache-2.0 file-level identifier supported by package release history",
+      "note": ""
+    },
+    {
+      "path": "src/qesn/config.py",
+      "baseline_git_blob_oid": "9d04ab6bec2d87e92baf0a76d188977ca0986656",
+      "baseline_sha256": "ebf2ee8a1d29d3b8dc5c1e702ad517e1a2b48b7f3cc9299f444b3af87a0705e3",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "Apache-2.0 file-level identifier supported by package release history",
+      "note": ""
+    },
+    {
+      "path": "src/qesn/diffusion.py",
+      "baseline_git_blob_oid": "14b88aa043a1df9e1cdb7fdebd1483fe3dc1a7d2",
+      "baseline_sha256": "dd529c3c79969e6c5ac43c00a1c43b40c9ae9db5afb5c33279402709befc05e6",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "Apache-2.0 file-level identifier supported by package release history",
+      "note": ""
+    },
+    {
+      "path": "src/qesn/py.typed",
+      "baseline_git_blob_oid": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "baseline_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "attribution": {
+        "status": "sidecar_only",
+        "method": "baseline and limited scope recorded; no per-file authorship assertion"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "src/training/trainer.cpp",
+      "baseline_git_blob_oid": "112745ea23c7df0aaca7056f672bf09733a70a7b",
+      "baseline_sha256": "4164652b2aaa5803121b269a34718890093c4dbd7e5b284082b5e69abe2294bb",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "tests/__init__.py",
+      "baseline_git_blob_oid": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "baseline_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "Apache-2.0 file-level identifier supported by package release history",
+      "note": ""
+    },
+    {
+      "path": "tests/test_cli.py",
+      "baseline_git_blob_oid": "8d59f400ba11b8b13b7eea4ca26b989eb5fb43e7",
+      "baseline_sha256": "a2d34e83fd83e8aa048315b3338fb09195cd2afbc68f4c5f20139f54bb62e7e7",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "Apache-2.0 file-level identifier supported by package release history",
+      "note": ""
+    },
+    {
+      "path": "tests/test_config.py",
+      "baseline_git_blob_oid": "4ea7c73def5adc9ea9e7caae8de306385b869c13",
+      "baseline_sha256": "1c8e932fe31ef4d1a48d7d572048dfe5b32487b52b230bca8e263734e41d9b78",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "Apache-2.0 file-level identifier supported by package release history",
+      "note": ""
+    },
+    {
+      "path": "tests/test_diffusion.py",
+      "baseline_git_blob_oid": "e4d7035b43e17de0505a23085a3dbe978a0a3f0c",
+      "baseline_sha256": "946f40d47df210368d5c49834a6a66722d866255bc3ed8e4a5fad1da919e220e",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "Apache-2.0 file-level identifier supported by package release history",
+      "note": ""
+    },
+    {
+      "path": "update_all_demos.py",
+      "baseline_git_blob_oid": "14af8cdad1326b0c23990600f77a263d5441ffae",
+      "baseline_sha256": "e5e17110b69b97e8d9789e1d7ba608aef01ab1260a448052def7219c31b73944",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    },
+    {
+      "path": "upload_to_huggingface.py",
+      "baseline_git_blob_oid": "6751bd739614664c7e2c9b313114c66e80c8905a",
+      "baseline_sha256": "c1596814877052fde78ad81aa35008d884a4db26d0975eb640f64113a2e9f9d4",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "no new file-level license statement; do not infer from repository metadata alone",
+      "note": ""
+    },
+    {
+      "path": "validation_pipeline.py",
+      "baseline_git_blob_oid": "6d580c1b82726a51a902087ffa2b098411c74e8e",
+      "baseline_sha256": "8ad6ec0bfcc9391b2c5f510fa1b61b4d9258a49787f3cd742b758d146407b231",
+      "attribution": {
+        "status": "in_file",
+        "method": "author, ORCID and attribution record date in header/comment"
+      },
+      "license_scope": "legacy MIT statement preserved; conflict with Apache metadata unresolved",
+      "note": ""
+    }
+  ],
+  "new_files_excluded_from_baseline": [
+    "ATTRIBUTION.md",
+    "LICENSE_SCOPE.md",
+    "provenance.json",
+    "provenance-baseline.json"
+  ]
+}

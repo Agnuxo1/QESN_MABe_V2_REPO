@@ -1,3 +1,5 @@
+REM ORCID: https://orcid.org/0009-0001-1634-7063
+REM Attribution recorded: 2026-11-06
 @echo off
 REM QESN-MABe V2: Build script adapted for existing installations
 REM Author: Francisco Angulo de Lafuente

@@ -1,3 +1,6 @@
+# Author: Francisco Angulo de Lafuente
+# ORCID: https://orcid.org/0009-0001-1634-7063
+# Attribution recorded: 2026-11-06
 # Dataset Configuration
 # Configuración para descargar y configurar el dataset MABe
 

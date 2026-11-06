@@ -1,3 +1,5 @@
+<!-- Author: Francisco Angulo de Lafuente | ORCID: https://orcid.org/0009-0001-1634-7063 | Attribution recorded: 2026-11-06 -->
+
 # Contributing to QESN-MABe V2
 
 Thank you for your interest in contributing to QESN-MABe V2! This document provides guidelines for contributing to this quantum physics-based machine learning project.

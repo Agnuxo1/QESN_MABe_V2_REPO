@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Author: Francisco Angulo de Lafuente
+# ORCID: https://orcid.org/0009-0001-1634-7063
+# Attribution recorded: 2026-11-06
 """
 Script para descargar y descomprimir el dataset MABe desde GitHub.
 Este script maneja la descarga automática del dataset comprimido.

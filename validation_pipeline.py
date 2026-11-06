@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# ORCID: https://orcid.org/0009-0001-1634-7063
+# Attribution recorded: 2026-11-06
 """
 QESN-MABe V2: Pipeline de Validacion Cruzada y Metricas Avanzadas
 Author: Francisco Angulo de Lafuente

@@ -1,3 +1,5 @@
+<!-- Author: Francisco Angulo de Lafuente | ORCID: https://orcid.org/0009-0001-1634-7063 | Attribution recorded: 2026-11-06 -->
+
 # 🚀 Guía Completa para Subir el Proyecto a GitHub
 
 ## 📋 Pasos para Subir Todo el Proyecto
